@@ -1,7 +1,38 @@
-import React from 'react';
-import { Grid, GridItem } from '@chakra-ui/react';
+import React, { useState } from 'react';
+import { Button, Grid, GridItem } from '@chakra-ui/react';
 
 const Gameboard = ({ palette }) => {
+  const [wasHueChosen, setHueChosen] = useState({
+    100: false,
+    200: false,
+    300: false,
+    400: false,
+    500: false,
+    600: false,
+    700: false,
+    800: false,
+    900: false,
+  });
+
+  const handleClick = (hue) => {
+    if (wasHueChosen[hue]) {
+      alert('Game Over');
+      return;
+    }
+    setHueChosen((wasHueChosen) => ({
+      ...wasHueChosen,
+      [hue]: true,
+    }));
+  };
+
+  const hues = [100, 200, 300, 400, 500, 600, 700, 800, 900];
+  const shuffleHues = (unshuffled) => {
+    let shuffled = unshuffled
+      .map((value) => ({ value, sort: Math.random() }))
+      .sort((a, b) => a.sort - b.sort)
+      .map(({ value }) => value);
+    return shuffled;
+  };
   return (
     <Grid
       m={2}
@@ -11,15 +42,18 @@ const Gameboard = ({ palette }) => {
       templateColumns='repeat(3, 1fr)'
       gap={1}
     >
-      <GridItem bg={`${palette}.500`} />
-      <GridItem bg={`${palette}.500`} />
-      <GridItem bg={`${palette}.500`} />
-      <GridItem bg={`${palette}.500`} />
-      <GridItem bg={`${palette}.500`} />
-      <GridItem bg={`${palette}.500`} />
-      <GridItem bg={`${palette}.500`} />
-      <GridItem bg={`${palette}.500`} />
-      <GridItem bg={`${palette}.500`} />
+      {shuffleHues(hues).map((hue) => {
+        return (
+          <GridItem>
+            <Button
+              bg={`${palette}.${hue}`}
+              onClick={() => handleClick(hue)}
+              h={'100%'}
+              w={'100%'}
+            ></Button>{' '}
+          </GridItem>
+        );
+      })}
     </Grid>
   );
 };

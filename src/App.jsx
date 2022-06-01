@@ -9,7 +9,7 @@ import { Flex } from '@chakra-ui/react';
 const App = () => {
   const [hasTheme, setHasTheme] = useState(false);
   const [palette, setPalette] = useState('');
-  const handleClick = (color) => {
+  const handlePaletteSelection = (color) => {
     setPalette(color);
     setHasTheme(true);
   };
@@ -22,7 +22,7 @@ const App = () => {
         {hasTheme ? (
           <Gameboard palette={palette} />
         ) : (
-          <PaletteSelector handleClick={handleClick} />
+          <PaletteSelector handleClick={handlePaletteSelection} />
         )}
       </Flex>
     </div>
