@@ -1,7 +1,7 @@
 import React from 'react';
 import { Grid, GridItem } from '@chakra-ui/react';
 
-const Gameboard = () => {
+const Gameboard = ({ palette }) => {
   return (
     <Grid
       m={2}
@@ -11,15 +11,15 @@ const Gameboard = () => {
       templateColumns='repeat(3, 1fr)'
       gap={1}
     >
-      <GridItem bg='tomato' />
-      <GridItem bg='tomato' />
-      <GridItem bg='tomato' />
-      <GridItem bg='tomato' />
-      <GridItem bg='tomato' />
-      <GridItem bg='tomato' />
-      <GridItem bg='tomato' />
-      <GridItem bg='tomato' />
-      <GridItem bg='tomato' />
+      <GridItem bg={`${palette}.500`} />
+      <GridItem bg={`${palette}.500`} />
+      <GridItem bg={`${palette}.500`} />
+      <GridItem bg={`${palette}.500`} />
+      <GridItem bg={`${palette}.500`} />
+      <GridItem bg={`${palette}.500`} />
+      <GridItem bg={`${palette}.500`} />
+      <GridItem bg={`${palette}.500`} />
+      <GridItem bg={`${palette}.500`} />
     </Grid>
   );
 };
