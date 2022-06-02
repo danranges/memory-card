@@ -1,5 +1,5 @@
 import React from 'react';
-import { Button, Flex } from '@chakra-ui/react';
+import { Heading, Button, Flex } from '@chakra-ui/react';
 
 const PaletteSelector = ({ handleClick }) => {
   const paletteOptions = [
@@ -15,7 +15,10 @@ const PaletteSelector = ({ handleClick }) => {
   ];
 
   return (
-    <Flex flexDirection='column' py={4} gap={2}>
+    <Flex flexDirection='column' py={4} gap={2} align='center'>
+      <Heading as={'h2'} size='xl' mb={2}>
+        Choose a color palette:
+      </Heading>
       {paletteOptions.map((color) => {
         return (
           <Button

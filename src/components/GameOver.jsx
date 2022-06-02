@@ -16,7 +16,7 @@ const GameOver = ({ hasWon, handleNewGame, palette }) => {
       ) : (
         <Box m={'5'}>
           <Heading as='h2' size='xl'>
-            You lost!
+            Nice try!
           </Heading>
           <Heading as='h2' size={'xl'}>
             Better luck next time!
