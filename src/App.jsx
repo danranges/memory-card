@@ -57,7 +57,11 @@ const App = () => {
           />
         )}
         {isGameOver && (
-          <GameOver hasWon={hasWon} handleNewGame={handleNewGame} />
+          <GameOver
+            hasWon={hasWon}
+            handleNewGame={handleNewGame}
+            palette={palette}
+          />
         )}
       </Flex>
     </div>

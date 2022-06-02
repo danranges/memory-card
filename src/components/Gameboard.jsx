@@ -45,7 +45,7 @@ const Gameboard = ({ palette, handleScore, handleGameOver }) => {
     >
       {shuffleHues(hues).map((hue) => {
         return (
-          <GridItem>
+          <GridItem key={hue}>
             <Button
               bg={`${palette}.${hue}`}
               onClick={() => handleClick(hue)}
