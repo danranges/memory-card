@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Button, Grid, GridItem } from '@chakra-ui/react';
 
-const Gameboard = ({ palette }) => {
+const Gameboard = ({ palette, handleScore }) => {
   const [wasHueChosen, setHueChosen] = useState({
     100: false,
     200: false,
@@ -23,6 +23,7 @@ const Gameboard = ({ palette }) => {
       ...wasHueChosen,
       [hue]: true,
     }));
+    handleScore();
   };
 
   const hues = [100, 200, 300, 400, 500, 600, 700, 800, 900];
