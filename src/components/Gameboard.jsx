@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Button, Grid, GridItem } from '@chakra-ui/react';
 
-const Gameboard = ({ palette, handleScore }) => {
+const Gameboard = ({ palette, handleScore, handleGameOver }) => {
   const [wasHueChosen, setHueChosen] = useState({
     100: false,
     200: false,
@@ -16,7 +16,7 @@ const Gameboard = ({ palette, handleScore }) => {
 
   const handleClick = (hue) => {
     if (wasHueChosen[hue]) {
-      alert('Game Over');
+      handleGameOver();
       return;
     }
     setHueChosen((wasHueChosen) => ({

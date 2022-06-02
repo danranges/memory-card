@@ -11,7 +11,7 @@ const PaletteSelector = ({ handleClick }) => {
     'blue',
     'purple',
     'pink',
-    'gray',
+    // 'gray',
   ];
 
   return (
