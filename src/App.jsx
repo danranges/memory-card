@@ -4,8 +4,9 @@ import Gameboard from './components/Gameboard';
 import Scoreboard from './components/Scoreboard';
 import PaletteSelector from './components/PaletteSelector';
 import GameOver from './components/GameOver';
+import Footer from './components/Footer';
 import './App.css';
-import { Flex } from '@chakra-ui/react';
+import { Box, Flex } from '@chakra-ui/react';
 
 const App = () => {
   const [hasTheme, setHasTheme] = useState(false);
@@ -42,10 +43,10 @@ const App = () => {
   }, [score, streak]);
 
   return (
-    <div className='App'>
+    <Box height={'100vh'} className='App'>
       <Header />
       <Scoreboard streak={streak} score={score} />
-      <Flex width={'100vw'} justify={'center'}>
+      <Flex width={'100vw'} justify={'center'} pb={10}>
         {!hasTheme && !isGameOver && (
           <PaletteSelector handleClick={handlePaletteSelection} />
         )}
@@ -64,7 +65,8 @@ const App = () => {
           />
         )}
       </Flex>
-    </div>
+      <Footer />
+    </Box>
   );
 };
 
