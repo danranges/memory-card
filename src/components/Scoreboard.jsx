@@ -8,12 +8,12 @@ const Scoreboard = ({ streak, score }) => {
     <Flex width='100vw' bg={bgColor} justify={'center'} gap='1rem'>
       <Box>
         <h1>
-          Streak: <span>{streak}</span>
+          Score: <span>{score}</span>
         </h1>
       </Box>
       <Box>
         <h1>
-          Score: <span>{score}</span>
+          All-Time: <span>{streak}</span>
         </h1>
       </Box>
     </Flex>

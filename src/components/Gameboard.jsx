@@ -67,6 +67,7 @@ const Gameboard = ({ palette, handleScore, handleGameOver }) => {
                 onClick={() => handleClick(hue)}
                 h={'100%'}
                 w={'100%'}
+                _hover={{ border: '2px white' }}
               ></Button>{' '}
             </GridItem>
           );
