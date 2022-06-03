@@ -11,7 +11,7 @@ A Memory Card Game for The Odin Project
 
 ## General Info
 
-The "CV Application" project brief can be found on
+The "Memory Card" project brief can be found on
 [The Odin Project's website](https://www.theodinproject.com/lessons/node-path-javascript-memory-card)
 
 The repo is hosted [here](https://github.com/danranges/memory-card)
