@@ -44,7 +44,7 @@ const App = () => {
 
   return (
     <Box height={'100vh'} className='App'>
-      <Header />
+      <Header handleNewGame={handleNewGame} hasTheme={hasTheme} />
       <Scoreboard streak={streak} score={score} />
       <Flex width={'100vw'} justify={'center'} pb={10}>
         {!hasTheme && !isGameOver && (

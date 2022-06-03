@@ -20,6 +20,7 @@ const Footer = () => {
         alignItems='center'
         my={2}
       >
+        <Text display={'inline'}>Made by</Text>
         <Icon as={FaGithub} w={8} h={8} />
         <Text display={'inline'}>Dan Ranges</Text>
       </Link>
